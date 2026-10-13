@@ -244,6 +244,30 @@ a {
   font-size: 20px;
 }
 
+/* BACK TO TOP
+   Hidden until script.js adds .is-visible part-way down. */
+.to-top {
+  display: none;
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  padding: 12px 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: #2F5D62;
+  border: none;
+  cursor: pointer;
+}
+
+.to-top:hover {
+  background-color: #15202B;
+}
+
+.to-top.is-visible {
+  display: block;
+}
+
 /* FOOTER */
 .site-footer {
   background-color: #15202B;

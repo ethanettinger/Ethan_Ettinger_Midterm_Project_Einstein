@@ -1,13 +1,3 @@
-function countPapers() {
-  var grid = document.getElementById('papers-grid');
-  var label = document.getElementById('papers-count');
-  if (!grid || !label) return;
-
-  var total = grid.getElementsByClassName('paper-card').length;
-  label.textContent = 'Showing all ' + total + ' papers.';
-}
-
-
 function enableSmoothScroll() {
   var links = document.querySelectorAll('.nav-link');
 
@@ -21,8 +11,6 @@ function enableSmoothScroll() {
     });
   }
 }
-
-
 function trackActiveSection() {
   var links = document.querySelectorAll('.nav-link');
   var sections = [];
@@ -50,8 +38,28 @@ function trackActiveSection() {
   update();
 }
 
+function enableBackToTop() {
+  var button = document.getElementById('to-top');
+  if (!button) return;
+
+  function update() {
+    if (window.scrollY > 600) {
+      button.classList.add('is-visible');
+    } else {
+      button.classList.remove('is-visible');
+    }
+  }
+
+  button.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', update);
+  update();
+}
+
 document.addEventListener('DOMContentLoaded', function () {
-  countPapers();
   enableSmoothScroll();
   trackActiveSection();
+  enableBackToTop();
 });
