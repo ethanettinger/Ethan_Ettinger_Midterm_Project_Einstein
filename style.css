@@ -1,0 +1,310 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #4A5560;
+  background-color: #F5F6F4;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  color: #15202B;
+  line-height: 1.25;
+}
+
+a {
+  color: #2F5D62;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* HEADER */
+.site-header {
+  background-color: #15202B;
+  padding: 64px 0 56px;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 54px;
+  color: #F5F6F4;
+}
+
+.site-tagline {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #9AA7AD;
+}
+
+/* NAVIGATION */
+.site-nav {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #DCE0DB;
+}
+
+.nav-list {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 18px 4px;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+  color: #4A5560;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.nav-link:hover {
+  color: #15202B;
+  border-bottom: 2px solid #DCE0DB;
+}
+
+.is-active {
+  color: #2F5D62;
+  border-bottom: 2px solid #2F5D62;
+}
+
+/* SECTIONS */
+.section {
+  padding: 72px 0;
+}
+
+.section-alt {
+  background-color: #EDEFEB;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 34px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #2F5D62;
+}
+
+.section-intro {
+  max-width: 620px;
+  margin-bottom: 40px;
+  color: #78838D;
+}
+
+/* ABOUT */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 56px;
+}
+
+.lead {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  color: #15202B;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-bottom: 16px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 13px 26px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #FFFFFF;
+  background-color: #2F5D62;
+}
+
+.button:hover {
+  background-color: #15202B;
+}
+
+.hero-figure {
+  border: 1px solid #DCE0DB;
+  background-color: #FFFFFF;
+  padding: 12px;
+}
+
+.hero-caption {
+  margin-top: 12px;
+  font-size: 14px;
+  text-align: center;
+  color: #78838D;
+}
+
+/* CARD GRID */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border: 1px solid #DCE0DB;
+  padding: 30px 26px;
+}
+
+ 
+.paper-card, .blog-card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+/* The blog is one article per row, full width - an article is
+   read top to bottom, so it does not belong in a column grid. */
+.blog-grid {
+  grid-template-columns: 1fr;
+}
+
+.card-title {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.card-meta {
+  font-size: 13px;
+  color: #78838D;
+  margin-bottom: 14px;
+}
+
+.card-link {
+  justify-self: start;
+  font-size: 15px;
+  text-decoration: none;
+  border-bottom: 1px solid #2F5D62;
+}
+
+.card-link:hover {
+  color: #15202B;
+}
+
+.paper-icon {
+  width: 38px;
+  margin-bottom: 18px;
+}
+
+.papers-count {
+  margin-top: 28px;
+  font-size: 14px;
+  color: #78838D;
+}
+
+/* GALLERY GRID  */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.gallery-item {
+  background-color: #FFFFFF;
+  border: 1px solid #DCE0DB;
+  padding: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-caption {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+  color: #78838D;
+}
+
+/* CONTACT */
+.contact-email {
+  font-size: 20px;
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: #15202B;
+  color: #9AA7AD;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 15px;
+}
+
+
+/* Tablets and small laptops */
+@media (max-width: 860px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .nav-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .site-title {
+    font-size: 42px;
+  }
+}
+
+/* Phones */
+@media (max-width: 560px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 0 18px;
+  }
+
+  .site-header {
+    padding: 44px 0 36px;
+  }
+
+  .site-title {
+    font-size: 32px;
+  }
+
+  .nav-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    font-size: 27px;
+  }
+
+  .lead {
+    font-size: 19px;
+  }
+
+  .card-grid, .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
